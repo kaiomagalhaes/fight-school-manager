@@ -15,41 +15,10 @@ const radioProps = [
 
 export default class HomeScreen extends Component {
   render() {
-    const { navigate } = this.props.navigation;
-
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-          <View style={styles.welcomeContainer}>
-            <Image
-              source={
-                __DEV__
-                  ? require('../assets/images/robot-dev.png')
-                  : require('../assets/images/robot-prod.png')
-              }
-              style={styles.welcomeImage}
-            />
-          </View>
-
-          <View style={styles.getStartedContainer}>
-            <Text style={styles.getStartedText}>
-              Select your flow below:
-            </Text>
-          </View>
-
-          <View style={styles.getStartedContainer}>
-            <RadioForm
-              radio_props={radioProps}
-              initial={0}
-              onPress={(value) => {
-                if ( value === 1) {
-                  navigate('SignUpStudent')
-                } else {
-                  navigate('SignUpSchool')
-                }
-              }}
-            />
-          </View>
+            <Text style={styles.getStartedText}>Sign up student - Screen not implemented yet</Text>
         </ScrollView>
       </View>
     );

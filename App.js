@@ -1,8 +1,8 @@
 import React from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { AppLoading, Asset, Font, Icon } from 'expo';
-// import AppNavigator from './navigation/AppNavigator';
-import SelectFlowScreen from './screens/SelectFlowScreen';
+import AppNavigator from './navigation/AppNavigator';
+import MainNavigator from './navigation/MainNavigator';
 
 export default class App extends React.Component {
   state = {
@@ -22,7 +22,7 @@ export default class App extends React.Component {
       return (
         <View style={styles.container}>
           {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-          <SelectFlowScreen />
+          <AppNavigator />
         </View>
       );
     }
